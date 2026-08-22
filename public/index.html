@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare HMS | Hospital Management System</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            <i class="fa-solid fa-hospital"></i>
+            <span>MediCare HMS</span>
+        </div>
+
+        <ul class="menu">
+
+            <li class="active">
+                <i class="fa-solid fa-chart-line"></i>
+                Dashboard
+            </li>
+
+            <li>
+                <i class="fa-solid fa-user-injured"></i>
+                Patients
+            </li>
+
+            <li>
+                <i class="fa-solid fa-user-doctor"></i>
+                Doctors
+            </li>
+
+            <li>
+                <i class="fa-solid fa-calendar-check"></i>
+                Appointments
+            </li>
+
+            <li>
+                <i class="fa-solid fa-bed"></i>
+                Wards
+            </li>
+
+            <li>
+                <i class="fa-solid fa-gear"></i>
+                Settings
+            </li>
+
+        </ul>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="topbar">
+
+            <div>
+
+                <h1>Hospital Management Dashboard</h1>
+                <p>Manage Patients, Doctors and Hospital Records Efficiently</p>
+
+            </div>
+
+            <div class="profile">
+
+                <i class="fa-solid fa-bell"></i>
+
+                <img src="https://ui-avatars.com/api/?name=Administrator&background=0D8ABC&color=fff"
+                    alt="Admin">
+
+            </div>
+
+        </header>
+
+        <!-- Dashboard Cards -->
+
+        <section class="dashboard">
+
+            <div class="card">
+
+                <i class="fa-solid fa-user-injured"></i>
+
+                <div>
+                    <h2 id="patientCount">0</h2>
+                    <p>Total Patients</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-user-doctor"></i>
+
+                <div>
+                    <h2 id="doctorCount">0</h2>
+                    <p>Total Doctors</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-bed"></i>
+
+                <div>
+                    <h2>124</h2>
+                    <p>Available Beds</p>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <i class="fa-solid fa-building"></i>
+
+                <div>
+                    <h2>12</h2>
+                    <p>Departments</p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Main Grid -->
+
+        <section class="content-grid">
+
+            <!-- Add Patient -->
+
+            <div class="panel">
+
+                <div class="panel-title">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    <h2>Add Patient</h2>
+
+                </div>
+
+                <div class="form-group">
+
+                    <input type="text"
+                        id="patientName"
+                        placeholder="Patient Name">
+
+                    <input type="number"
+                        id="patientAge"
+                        placeholder="Age">
+
+                    <input type="text"
+                        id="patientDisease"
+                        placeholder="Disease">
+
+                    <button id="addPatientBtn">
+                        <i class="fa-solid fa-plus"></i>
+                        Add Patient
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- Add Doctor -->
+
+            <div class="panel">
+
+                <div class="panel-title">
+
+                    <i class="fa-solid fa-user-doctor"></i>
+
+                    <h2>Add Doctor</h2>
+
+                </div>
+
+                <div class="form-group">
+
+                    <input type="text"
+                        id="doctorName"
+                        placeholder="Doctor Name">
+
+                    <input type="text"
+                        id="doctorSpecialization"
+                        placeholder="Specialization">
+
+                    <button id="addDoctorBtn">
+                        <i class="fa-solid fa-plus"></i>
+                        Add Doctor
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Patients -->
+
+        <section class="list-section">
+
+            <div class="section-title">
+
+                <h2>Patient Records</h2>
+
+                <input
+                    type="text"
+                    placeholder="Search Patients..."
+                    id="searchPatient">
+
+            </div>
+
+            <div
+                id="patientsContainer"
+                class="cards-container">
+
+            </div>
+
+        </section>
+
+        <!-- Doctors -->
+
+        <section class="list-section">
+
+            <div class="section-title">
+
+                <h2>Doctor Directory</h2>
+
+                <input
+                    type="text"
+                    placeholder="Search Doctors..."
+                    id="searchDoctor">
+
+            </div>
+
+            <div
+                id="doctorsContainer"
+                class="cards-container">
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+
+        <footer>
+
+            <p>
+                © 2026 MediCare HMS | Designed for Hospital Management
+            </p>
+
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
+
+
